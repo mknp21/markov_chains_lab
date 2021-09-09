@@ -85,7 +85,12 @@ def make_chains(text_string):
 
 
 def make_text(chains):
-    """Return text from chains."""
+    """Return text from chains.
+    starting point: key = ('you', 'could') + ['you']
+    random tuple key with matching list, choose random item from list.
+    take second item in tuple + chosen item to create new tuple.
+    next would be key2 = ('could', 'you') + ['with']
+    """
 
     key_val = list(chains.items())
     link = choice(key_val)
